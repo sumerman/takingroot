@@ -3,8 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Nature : EnemyClassification
+public enum Effect
 {
-    private string title;
-    public string Title { get; }
+    Negative = 0,
+    Positive = 1
+}
+
+[System.Serializable]
+public struct Reply
+{
+    public Effect effect;
+    public string text;
+    public int cardId;
+}
+
+[System.Serializable]
+public class Nature
+{
+    public int id;
+    public List<Reply> replies;
+
+    public Reply GetReply(int cardId)
+    {
+        return replies.Find(r => r.cardId == cardId);
+    }
 }

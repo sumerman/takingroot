@@ -1,15 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum CharacterTypes
+
+
+[System.Serializable]
+public class CharacterTypes
 {
-    Family = 1,
-    Friend = 2,
-    ThirdParty = 3
+    public List<CharacterType> items;
 }
 
 [System.Serializable]
-public class CharacterType : EnemyClassification
+public class CharacterType
 {
-    CharacterTypes type;
+    public int id;
+    public string title;
+    public List<Nature> natures;
+    Nature selectedNature;
+
+    public Nature SelectedNature
+    {
+        get {
+            if (selectedNature == null)
+            {
+                selectedNature = natures[Random.Range(0, natures.Count)];
+            }
+            return selectedNature;
+        }
+    }
+
+    public Reply ReplyToCard(int cardId)
+    {
+        return SelectedNature.GetReply(cardId);
+    }
 }
