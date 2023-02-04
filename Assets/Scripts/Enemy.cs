@@ -26,8 +26,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-    // string ApplyCard(Card card)
-    // {
-    //     // nature.Effect(card.id);
-    // }
+    void ApplyCard(Card card)
+    {
+        if (card.CardType != CardType.Argument)
+        {
+            throw new System.Exception("Card type isn't an Argument");
+        }
+        Reply reply = nature.ReplyToCard(card.Id);
+        // TODO: render `reply.Text` in a dialog box
+        // TODO: conditional logic on `reply.Effect`
+    }
 }

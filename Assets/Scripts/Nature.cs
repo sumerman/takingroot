@@ -8,29 +8,29 @@ public enum Effect
     Positive = 1
 }
 
+public struct Reply
+{
+    public Effect Effect { get; }
+    public string Text { get; }
+
+    public Reply(Effect effect, string text)
+    {
+        Effect = effect;
+        Text = text;
+    }
+}
+
 [System.Serializable]
 public class Nature
 {
-    List<int> positiveCardsIds;
-    List<int> negativeCardsIds;
     private string title;
+    Dictionary<int, Reply> cardReplies;
 
-    public string Title { get => title; set => title = value; }
+    public string Title { get; }
 
-    public Effect CardEffect(int cardId)
+    public Reply ReplyToCard(int cardId)
     {
-        if (positiveCardsIds.Contains(cardId))
-        {
-            return Effect.Positive;
-        }
-        else if (negativeCardsIds.Contains(cardId))
-        {
-            return Effect.Negative;
-        }
-        else
-        {
-            throw new System.Exception("Undefined card id");
-        }
+        return cardReplies[cardId];
     }
 
     public static Nature CreateFromJson(string jsonString)

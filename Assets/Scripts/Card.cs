@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CardType {
+    Argument = 1,
+    Action = 2
+}
+
 public class Card : MonoBehaviour
 {
     [SerializeField] string title;
     [SerializeField] string description;
-    [SerializeField] int id;
+    [SerializeField] public int Id { get; }
     [SerializeField] Sprite art;
-    // [SerializeField] Dictionary<CardReply, int> replies;
+    [SerializeField] public CardType CardType { get; }
 
     // Start is called before the first frame update
     void Start()
