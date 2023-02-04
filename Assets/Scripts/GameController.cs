@@ -10,17 +10,16 @@ public class GameController : MonoBehaviour
     [SerializeField] public Deck deck;
 
     public TextAsset characterTypesJson;
+    public TextAsset cardsJson;
 
     
     CharacterTypes characterTypes;
+    AvailableCards availableCards;
 
     // Start is called before the first frame update
     void Start()
     {
         LoadResources();
-        Debug.Log(characterTypes.items[0].title);
-        Debug.Log(characterTypes.items[0].SelectedNature.replies[0].text);
-        Debug.Log(characterTypes.items[0].SelectedNature.replies[0].effect);
     }
 
     // Update is called once per frame
@@ -32,6 +31,7 @@ public class GameController : MonoBehaviour
     void LoadResources()
     {
         characterTypes = JsonUtility.FromJson<CharacterTypes>(characterTypesJson.text);
+        availableCards = JsonUtility.FromJson<AvailableCards>(cardsJson.text);
     }
 
 }

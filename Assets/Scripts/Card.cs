@@ -7,10 +7,21 @@ public enum CardType {
     Action = 2
 }
 
+[System.Serializable]
+public class AvailableCards
+{
+    List<Card> cards;
+
+    public Card GetCard(int cardId)
+    {
+        return cards.Find(r => r.Id == cardId);
+    }
+}
+
+[System.Serializable]
 public class Card : MonoBehaviour
 {
     [SerializeField] string title;
-    [SerializeField] string description;
     [SerializeField] public int Id { get; }
     [SerializeField] string spriteId;
     [SerializeField] public CardType CardType { get; }
