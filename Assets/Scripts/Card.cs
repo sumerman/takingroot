@@ -19,7 +19,7 @@ public class AvailableCards
 }
 
 [System.Serializable]
-public class Card : MonoBehaviour
+public class Card
 {
     [SerializeField] string title;
     [SerializeField] public int Id { get; }

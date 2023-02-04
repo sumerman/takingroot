@@ -9,7 +9,7 @@ public enum ActionCards
     Meme = 15
 }
 
-public class Hand : MonoBehaviour
+public class Hand
 {
     List<Card> cards;
     GameController controller;
