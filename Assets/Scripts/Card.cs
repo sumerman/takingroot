@@ -12,8 +12,9 @@ public class Card : MonoBehaviour
     [SerializeField] string title;
     [SerializeField] string description;
     [SerializeField] public int Id { get; }
-    [SerializeField] Sprite art;
+    [SerializeField] string spriteId;
     [SerializeField] public CardType CardType { get; }
+    [SerializeField] GameController controller;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,20 @@ public class Card : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void Play()
+    {
+        Hand hand = controller.hand;
+        if(this.CardType == CardType.Argument)
+        {
+            Enemy enemy = controller.currentEnemy;
+            enemy.ApplyCard(this);
+        }
+        else if(this.CardType == CardType.Action)
+        {
+            hand.ApplyCard(this);
+        }
+        hand.WithdrawCard(this);
     }
 }
