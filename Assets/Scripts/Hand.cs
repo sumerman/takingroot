@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ActionCards
+{
+    Rootstagram = 13,
+    News = 14,
+    Meme = 15
+}
+
 public class Hand : MonoBehaviour
 {
     List<Card> cards;
@@ -21,7 +28,19 @@ public class Hand : MonoBehaviour
 
     public void ApplyCard(Card card)
     {
-
+        switch((ActionCards) card.Id)
+        {
+            case ActionCards.Rootstagram:
+                DrawNewCard();
+                AddCardById((int) ActionCards.Meme);
+                break;
+            case ActionCards.News:
+                DrawNewCard();
+                DrawNewCard();
+                break;
+            case ActionCards.Meme:
+                break;
+        }
     }
 
     public void WithdrawCard(Card card)
@@ -29,7 +48,7 @@ public class Hand : MonoBehaviour
         cards.Remove(card);
     }
 
-    void DrawNewCard()
+    public void DrawNewCard()
     {
         Deck deck = controller.deck;
         if (deck.CanDrawCard())
@@ -40,5 +59,12 @@ public class Hand : MonoBehaviour
         {
             // TODO render empty hand notification
         }
+    }
+
+    void AddCardById(int id)
+    {
+        // Card card = Card.CreateById(id)
+        Card card = null; // TODO replace
+        cards.Add(card);
     }
 }

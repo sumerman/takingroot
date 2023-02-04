@@ -14,6 +14,8 @@ public class CharacterType
 {
     public int id;
     public string title;
+    public string intro;
+    public string outro;
     public List<Nature> natures;
     Nature selectedNature;
 

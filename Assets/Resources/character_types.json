@@ -3,6 +3,8 @@
     {
       "id": 1,
       "title": "Mother",
+      "intro": "Basil? Young man, you come out of the room this instant.",
+      "outro": "Very well. If you insist on turning yourself into a vegetable — so be it.",
       "natures": [
         {
           "id": 1,
@@ -20,7 +22,791 @@
             {
               "cardId": 3,
               "effect": 1,
-              "text": "Are you studying Spanish? I am so proud of you, my pudding pie."
+              "text": "Are you studying Spanish? I am so proud of you!"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*tired sigh*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Covers her ears* BASIL. Don't you dare."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Sigh* You're just like your father."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "No one makes demands in MY house. Open the door this instant."
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "Are you mocking my voice, young man? This will not stand. Open the door!"
+            },
+            {
+              "cardId": 9,
+              "effect": 1,
+              "text": "Oh, my apple pie. Wait until you're the one paying the bills."
+            },
+            {
+              "cardId": 10,
+              "effect": 1,
+              "text": "*tired sigh*"
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "There's nothing to be afraid of if there's nothing to hide. Open the door."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "Basil, why don't you spend your energy on something useful?"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "Young man! The house arrest was over a month ago."
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "Not until you're eighteen, it isn't."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Are you studying Spanish? I am so proud of you!"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*tired sigh*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Covers her ears* BASIL. Don't you dare."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Sigh* You're just like your father."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "No one makes demands in MY house. Open the door this instant."
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "Are you mocking my voice, young man? This will not stand. Open the door!"
+            },
+            {
+              "cardId": 9,
+              "effect": 1,
+              "text": "That will be the least of your concerns if you don't open the door."
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "Don't you get philosophical with me, young man."
+            },
+            {
+              "cardId": 11,
+              "effect": 1,
+              "text": "Oh lord! I'll close the curtains!"
+            },
+            {
+              "cardId": 12,
+              "effect": 1,
+              "text": "Really? *sniff-sniff.* You grew up so fast..."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "Young man! The house arrest was over a month ago."
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "Not until you're eighteen, it isn't."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Are you studying Spanish? I am so proud of you!"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*tired sigh*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Covers her ears* BASIL. Don't you dare."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Sigh* You're just like your father. "
+            },
+            {
+              "cardId": 7,
+              "effect": 1,
+              "text": "The lord is testing me."
+            },
+            {
+              "cardId": 8,
+              "effect": 1,
+              "text": "Oh lord, save this household! Satan has claimed another soul!"
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "That will be the least of your concerns if you don't open the door."
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "Don't you get philosophical with me, young man."
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "There's nothing to be afraid of if there's nothing to hide. Open the door."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "Basil, why don't you spend your energy on something useful?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Dog",
+      "intro": "*Argumentative barking*",
+      "outro": "*Distracted Barking*",
+      "natures": [
+        {
+          "id": 1,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "*Baffled aroo*"
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "*Sound of pissing on the door* BARK."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Disappointed whining*"
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Approving Bark*"
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "*Tired Snort*"
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "*Tired Snort*"
+            },
+            {
+              "cardId": 9,
+              "effect": 1,
+              "text": "*Distressed Whining*"
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "*Blues Howling*"
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "...wat?"
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "...wat?"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "*Baffled aroo*"
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "*Sound of pissing on the door* BARK."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Disappointed whining*"
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Approving Bark*"
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "*Tired Snort*"
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "*Tired Snort*"
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "*Eyes Rolling*"
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "*Eyes Rolling*"
+            },
+            {
+              "cardId": 11,
+              "effect": 1,
+              "text": "*Terrified Barking*"
+            },
+            {
+              "cardId": 12,
+              "effect": 1,
+              "text": "*Starts Digging a Hole In The Floor*"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "*Baffled aroo*"
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "*Sound of pissing on the door* BARK."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "*Disappointed whining*"
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "*Approving Bark*"
+            },
+            {
+              "cardId": 7,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 8,
+              "effect": 1,
+              "text": "*Excited barking*"
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "*Eyes Rolling*"
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "*Eyes Rolling*"
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "...wat?"
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "...wat?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Duane",
+      "intro": "Hey, brochachos? I'm throwing a party. You're in, or are you in?",
+      "outro": "Aight man. If you wanna chill, you can chill. See you later",
+      "natures": [
+        {
+          "id": 1,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "Oh no, brosquito. I'm sorry, man. That's wack."
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "I hear you, amigo. No need to get up all formal."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Namaste, my Italian bro. I'll leave you alone if you want."
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "I KNEW I wasn't the only one eating that shit, man. Deal!"
+            },
+            {
+              "cardId": 5,
+              "effect": 0,
+              "text": "Ah, man. That ain't cool, man. Don't do a bro like that, man."
+            },
+            {
+              "cardId": 6,
+              "effect": 0,
+              "text": "What? You need a trip keeper for that shit, man. Lemme in."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "Hahaha. Is that our new secret code?"
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "*Duane starts signing along*"
+            },
+            {
+              "cardId": 9,
+              "effect": 1,
+              "text": "True. True, bro. We, the sixteen years olds, know how it is."
+            },
+            {
+              "cardId": 10,
+              "effect": 1,
+              "text": "One of those days, huh? Aight, I can give you space if you want. No biggie."
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "That's stoned thinking, man. The coast is clear."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "I mean, it's not like the tunnel is going anywhere, right? Let's bounce."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "Oh no, brosquito. I'm sorry, man. That's wack."
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "I hear you, amigo. No need to get up all formal."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Namaste, my Italian bro. I'll leave you alone if you want."
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "I KNEW I wasn't the only one eating that shit, man. Deal!"
+            },
+            {
+              "cardId": 5,
+              "effect": 0,
+              "text": "Ah, man. That ain't cool, man. Don't do a bro like that, man."
+            },
+            {
+              "cardId": 6,
+              "effect": 0,
+              "text": "What? You need a trip keeper for that shit, man. Lemme in."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "Hahaha. Is that our new secret code?"
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "*Duane starts signing along*"
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "Who's Economy?"
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "Oh, shit's getting deep, man. Wanna get fresh air?"
+            },
+            {
+              "cardId": 11,
+              "effect": 1,
+              "text": "SHIT. THEY'RE ONTO US."
+            },
+            {
+              "cardId": 12,
+              "effect": 1,
+              "text": "Haha. Nice."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "Oh no, brosquito. I'm sorry, man. That's wack."
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "I hear you, amigo. No need to get up all formal."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Namaste, my Italian bro. I'll leave you alone if you want."
+            },
+            {
+              "cardId": 4,
+              "effect": 1,
+              "text": "I KNEW I wasn't the only one eating that shit, man. Deal!"
+            },
+            {
+              "cardId": 5,
+              "effect": 0,
+              "text": "Ah, man. That ain't cool, man. Don't do a bro like that, man."
+            },
+            {
+              "cardId": 6,
+              "effect": 0,
+              "text": "What? You need a trip keeper for that shit, man. Lemme in."
+            },
+            {
+              "cardId": 7,
+              "effect": 1,
+              "text": "*Silence* Alrighty, brochachos. I can see you're busy."
+            },
+            {
+              "cardId": 8,
+              "effect": 1,
+              "text": "Oh, man. Things are getting kinda real up in here, man..."
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "Who's Economy?"
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "Oh, shit's getting deep, man. Wanna get fresh air?"
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "That's stoned thinking, man. The coast is clear."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "I mean, it's not like the tunnel is going anywhere, right? Let's bounce."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Alpha and Omega",
+      "intro": "DO NOT BE AFRAID, MY CHILD. ABANDON YOUR DWELLING.",
+      "outro": "HAVE IT YOUR WAY, CHILD. I MAY NOT UNDERSTAND YOUR DESIRE FOR SOLITUDE. BUT I CAN RESPECT IT.  ...  WELL, NOT REALLY. YOU JUST BORE ME.",
+      "natures": [
+        {
+          "id": 1,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "IS THAT SO? OR PERHAPS YOU SIMPLY WISH TO BE LEFT ALONE?"
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "A CHARMING CONCEPT. IT AMUSES ME."
+            },
+            {
+              "cardId": 3,
+              "effect": 0,
+              "text": "YOUR SPANISH REQUIRES IMPROVEMENT, MY CHILD."
+            },
+            {
+              "cardId": 4,
+              "effect": 0,
+              "text": "ABANDON YOUR MATERIAL TEMPTATIONS, MY CHILD (I PREFER LUCKY CHARMS ANYWAY.)"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "DO NOT SHARE WITH ME THE FORBIDDEN KNOWLEDGE."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "A REASONABLE REQUEST."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "DEMANDS? HOW QUAINT."
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "YOUR ANTICS ARE MERELY POSTPONING THE INEVITABLE."
+            },
+            {
+              "cardId": 9,
+              "effect": 1,
+              "text": "YES. THE CURRENT AFFAIRS WERE NOT ENVISIONED AS THEY ARE TODAY."
+            },
+            {
+              "cardId": 10,
+              "effect": 1,
+              "text": "AN ACCEPTABLE OPINION."
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "THEY DO NOT HOLD THE DOMINION, MY CHILD."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "LIES. YOU ARE PLAYING ROBLOX."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "IS THAT SO? OR PERHAPS YOU SIMPLY WISH TO BE LEFT ALONE?"
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "A CHARMING CONCEPT. IT AMUSES ME."
+            },
+            {
+              "cardId": 3,
+              "effect": 0,
+              "text": "YOUR SPANISH REQUIRES IMPROVEMENT, MY CHILD."
+            },
+            {
+              "cardId": 4,
+              "effect": 0,
+              "text": "ABANDON YOUR MATERIAL TEMPTATIONS, MY CHILD (I PREFER LUCKY CHARMS ANYWAY.)"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "DO NOT SHARE WITH ME THE FORBIDDEN KNOWLEDGE."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "A REASONABLE REQUEST."
+            },
+            {
+              "cardId": 7,
+              "effect": 0,
+              "text": "DEMANDS? HOW QUAINT."
+            },
+            {
+              "cardId": 8,
+              "effect": 0,
+              "text": "YOUR ANTICS ARE MERELY POSTPONING THE INEVITABLE."
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "I FIND IT DIFFICULT TO GRASP YOUR POINT."
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "I FIND IT DIFFICULT TO GRASP YOUR POINT."
+            },
+            {
+              "cardId": 11,
+              "effect": 1,
+              "text": "INDEED. PERHAPS YOUR RECLUSIVENESS SERVES A PURPOSE."
+            },
+            {
+              "cardId": 12,
+              "effect": 1,
+              "text": "HAHA. NICE."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 1,
+              "text": "IS THAT SO? OR PERHAPS YOU SIMPLY WISH TO BE LEFT ALONE?"
+            },
+            {
+              "cardId": 2,
+              "effect": 1,
+              "text": "A CHARMING CONCEPT. IT AMUSES ME."
+            },
+            {
+              "cardId": 3,
+              "effect": 0,
+              "text": "YOUR SPANISH REQUIRES IMPROVEMENT, MY CHILD."
+            },
+            {
+              "cardId": 4,
+              "effect": 0,
+              "text": "ABANDON YOUR MATERIAL TEMPTATIONS, MY CHILD (I PREFER LUCKY CHARMS ANYWAY.)"
+            },
+            {
+              "cardId": 5,
+              "effect": 1,
+              "text": "DO NOT SHARE WITH ME THE FORBIDDEN KNOWLEDGE."
+            },
+            {
+              "cardId": 6,
+              "effect": 1,
+              "text": "A REASONABLE REQUEST."
+            },
+            {
+              "cardId": 7,
+              "effect": 1,
+              "text": "VERY WELL. THE SATAN'S WISHES SHALL BE CONSIDERED."
+            },
+            {
+              "cardId": 8,
+              "effect": 1,
+              "text": "I BELIEVE THE PROPER RESPONSE IN EARTH TERMS WOULD BE: \"SICK TUNES, BRO.\""
+            },
+            {
+              "cardId": 9,
+              "effect": 0,
+              "text": "I FIND IT DIFFICULT TO GRASP YOUR POINT."
+            },
+            {
+              "cardId": 10,
+              "effect": 0,
+              "text": "I FIND IT DIFFICULT TO GRASP YOUR POINT."
+            },
+            {
+              "cardId": 11,
+              "effect": 0,
+              "text": "THEY DO NOT HOLD THE DOMINION, MY CHILD."
+            },
+            {
+              "cardId": 12,
+              "effect": 0,
+              "text": "LIES. YOU ARE PLAYING ROBLOX."
             }
           ]
         }
