@@ -7,6 +7,7 @@ using TMPro;
 public class Test : MonoBehaviour
 {
     public Button btn;
+    public Sprite cardSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,12 @@ public class Test : MonoBehaviour
 
     void OnClick() 
     {
-        DialogHistory hist = GameObject.FindObjectOfType<DialogHistory>();
-        hist.AddPhrase("foooo");
         Debug.Log("Click");
+
+        UIDialogHistory hist = GameObject.FindObjectOfType<UIDialogHistory>();
+        hist.AddPhrase("foooo");
+
+        UIDeck deck = GameObject.FindObjectOfType<UIDeck>();
+        deck.AddCard(cardSprite, "Bar!");
     }
 }

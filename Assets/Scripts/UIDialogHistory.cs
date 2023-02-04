@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
-public class DialogHistory : MonoBehaviour
+public class UIDialogHistory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private LayoutGroup layoutGroup;
+    private LayoutGroup _layoutGroup;
     public GameObject dialogBubblePrefab;
     void Start()
     {
-        layoutGroup = GetComponent<LayoutGroup>();
-        Assert.IsNotNull(layoutGroup); 
+        _layoutGroup = GetComponent<LayoutGroup>();
+        Assert.IsNotNull(_layoutGroup); 
         Clear();
     }
 
@@ -27,13 +26,12 @@ public class DialogHistory : MonoBehaviour
     {
         GameObject newPhrase = Instantiate(dialogBubblePrefab, transform.position, Quaternion.identity);
         newPhrase.transform.SetParent(transform, false);
-        DialogBubble dialogBubble = newPhrase.GetComponent<DialogBubble>();
+        UIDialogBubble dialogBubble = newPhrase.GetComponent<UIDialogBubble>();
         if (dialogBubble) {
             dialogBubble.Text = text;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

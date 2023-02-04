@@ -8,7 +8,7 @@ using UnityEditor;
 #endif
 
 [ExecuteInEditMode]
-public class DialogBubble : MonoBehaviour
+public class UIDialogBubble : MonoBehaviour
 {
     public string Text
     {
@@ -18,7 +18,7 @@ public class DialogBubble : MonoBehaviour
     [SerializeField]
     private string _text;
 
-    private TextMeshProUGUI textComponent;
+    private TextMeshProUGUI _textComponent;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +28,10 @@ public class DialogBubble : MonoBehaviour
 
     public void ForceUpdate() 
     {
-        textComponent = GetComponentInChildren<TextMeshProUGUI>();
-        Assert.IsNotNull(textComponent);
-        textComponent.text = _text;
-        textComponent.ForceMeshUpdate(true, true);
+        _textComponent = GetComponentInChildren<TextMeshProUGUI>();
+        Assert.IsNotNull(_textComponent);
+        _textComponent.text = _text;
+        _textComponent.ForceMeshUpdate(true, true);
     }
 
     // Update is called once per frame
