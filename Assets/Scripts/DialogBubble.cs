@@ -26,9 +26,9 @@ public class DialogBubble : MonoBehaviour
         ForceUpdate();
     }
 
-    void ForceUpdate() 
+    public void ForceUpdate() 
     {
-        textComponent = GetComponentInChildren(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
+        textComponent = GetComponentInChildren<TextMeshProUGUI>();
         Assert.IsNotNull(textComponent);
         textComponent.text = _text;
         textComponent.ForceMeshUpdate(true, true);
