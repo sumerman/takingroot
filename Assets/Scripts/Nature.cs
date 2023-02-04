@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Effect
+{
+    Negative = 0,
+    Positive = 1
+}
+
 [System.Serializable]
 public class Nature
 {
@@ -11,19 +17,24 @@ public class Nature
 
     public string Title { get => title; set => title = value; }
 
-    public bool Effect(int cardId)
+    public Effect CardEffect(int cardId)
     {
         if (positiveCardsIds.Contains(cardId))
         {
-            return true;
+            return Effect.Positive;
         }
         else if (negativeCardsIds.Contains(cardId))
         {
-            return false;
+            return Effect.Negative;
         }
         else
         {
             throw new System.Exception("Undefined card id");
         }
+    }
+
+    public static Nature CreateFromJson(string jsonString)
+    {
+        return JsonUtility.FromJson<Nature>(jsonString);
     }
 }
