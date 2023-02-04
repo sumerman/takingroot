@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterType
-{
-    Family = 1,
-    Friend = 2,
-    ThirdParty = 3
-}
-
 public class Enemy : MonoBehaviour
 {
     CharacterType characterType;
@@ -26,8 +19,25 @@ public class Enemy : MonoBehaviour
 
     }
 
-    // string ApplyCard(Card card)
-    // {
-    //     // nature.Effect(card.id);
-    // }
+    public void ApplyCard(Card card)
+    {
+        if (card.CardType != CardType.Argument)
+        {
+            throw new System.Exception("Card type isn't an Argument");
+        }
+        Reply reply = ReplyToCard(card.Id);
+        // TODO: render `reply.Text` in a dialog box
+        // TODO: conditional logic on `reply.Effect`
+    }
+    private Reply ReplyToCard(int cardId)
+    {
+        if (nature.CardReplies.ContainsKey(cardId))
+        {
+            return nature.CardReplies[cardId];
+        }
+        else
+        {
+            return characterType.CardReplies[cardId];
+        }
+    }
 }
