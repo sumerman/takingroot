@@ -18,6 +18,7 @@ public class CharacterType
     public string outro;
     public List<Nature> natures;
     Nature selectedNature;
+    public int victoriesRequired;
 
     public Nature SelectedNature
     {

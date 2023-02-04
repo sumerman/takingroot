@@ -5,6 +5,7 @@
       "title": "Mother",
       "intro": "Basil? Young man, you come out of the room this instant.",
       "outro": "Very well. If you insist on turning yourself into a vegetable — so be it.",
+      "victoriesRequired": 2,
       "natures": [
         {
           "id": 1,
@@ -208,6 +209,7 @@
       "title": "Dog",
       "intro": "*Argumentative barking*",
       "outro": "*Distracted Barking*",
+      "victoriesRequired": 2,
       "natures": [
         {
           "id": 1,
@@ -411,6 +413,7 @@
       "title": "Duane",
       "intro": "Hey, brochachos? I'm throwing a party. You're in, or are you in?",
       "outro": "Aight man. If you wanna chill, you can chill. See you later",
+      "victoriesRequired": 2,
       "natures": [
         {
           "id": 1,
@@ -614,6 +617,7 @@
       "title": "Alpha and Omega",
       "intro": "DO NOT BE AFRAID, MY CHILD. ABANDON YOUR DWELLING.",
       "outro": "HAVE IT YOUR WAY, CHILD. I MAY NOT UNDERSTAND YOUR DESIRE FOR SOLITUDE. BUT I CAN RESPECT IT.  ...  WELL, NOT REALLY. YOU JUST BORE ME.",
+      "victoriesRequired": 3,
       "natures": [
         {
           "id": 1,

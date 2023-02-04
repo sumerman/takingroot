@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     CharacterType characterType;
+    int victories = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,16 @@ public class Enemy : MonoBehaviour
         }
         
         Reply reply = characterType.ReplyToCard(card.Id);
+        if (reply.effect == Effect.Positive)
+        {
+            victories++;
+        }
         // TODO: render `reply.Text` in a dialog box
         // TODO: conditional logic on `reply.Effect`
+    }
+
+    public bool Defeated
+    {
+        get { return victories >= characterType.victoriesRequired; }
     }
 }
