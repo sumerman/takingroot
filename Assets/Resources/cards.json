@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "I'm under house arrest.",
+      "spriteName": "house_arest",
+      "cardType": 1
+    },
+    {
+      "id": 2,
+      "title": "Go away. This is private property.",
+      "spriteName": "private_property",
+      "cardType": 1
+    },
+    {
+      "id": 3,
+      "title": "*Yell something in Spanish*",
+      "spriteName": "spanish",
+      "cardType": 1
+    },
+    {
+      "id": 4,
+      "title": "Leave me alone. I'll give you a scooby snack.",
+      "spriteName": "scooby_snack",
+      "cardType": 1
+    },
+    {
+      "id": 5,
+      "title": "*Start spoiling a popular show.*",
+      "spriteName": "spoiler_alert",
+      "cardType": 1
+    },
+    {
+      "id": 6,
+      "title": "Can't a guy have a mental breakdown in private?",
+      "spriteName": "mental_breakdown",
+      "cardType": 1
+    },
+    {
+      "id": 7,
+      "title": "Satan demands sacrifice!",
+      "spriteName": "satan_sacrifice",
+      "cardType": 1
+    },
+    {
+      "id": 8,
+      "title": "*Sing Deathcore About Judgment Day*",
+      "spriteName": "deathcore",
+      "cardType": 1
+    },
+    {
+      "id": 9,
+      "title": "No. I'm too depressed by the economy.",
+      "spriteName": "depressed_in_economy",
+      "cardType": 1
+    },
+    {
+      "id": 10,
+      "title": "There's no point in going out. There's no point in anything.",
+      "spriteName": "no_point_in_going_out",
+      "cardType": 1
+    },
+    {
+      "id": 11,
+      "title": "I can't. Government spies are everywhere.",
+      "spriteName": "govenment_spies",
+      "cardType": 1
+    },
+    {
+      "id": 12,
+      "title": "I can't. I'm digging a tunnel to escape camera surveillance.",
+      "spriteName": "digging_tunnel",
+      "cardType": 1
+    },
+    {
+      "id": 13,
+      "title": "Check Rootstagram",
+      "spriteName": "rootstagram",
+      "cardType": 2
+    },
+    {
+      "id": 14,
+      "title": "Read News",
+      "spriteName": "read_news",
+      "cardType": 2
+    },
+    {
+      "id": 30,
+      "title": "Dunk meme",
+      "spriteName": "dunk_meme",
+      "cardType": 2
+    }
+  ]
+}
