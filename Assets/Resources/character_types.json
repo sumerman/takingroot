@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Mother",
+      "natures": [
+        {
+          "id": 1,
+          "replies": [
+            {
+              "cardId": 1,
+              "effect": 0,
+              "text": "Young man! The house arrest was over a month ago."
+            },
+            {
+              "cardId": 2,
+              "effect": 0,
+              "text": "Not until you're eighteen, it isn't."
+            },
+            {
+              "cardId": 3,
+              "effect": 1,
+              "text": "Are you studying Spanish? I am so proud of you, my pudding pie."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
