@@ -102,8 +102,14 @@ public class GameController : MonoBehaviour
 		}
 		else if (hand.IsEmpty())
 		{
-			SceneManager.LoadScene(GameController.SCENE_OVER);
+			StartCoroutine(GameOver());
 		}
+	}
+
+	private IEnumerator GameOver()
+	{
+		yield return new WaitForSeconds(1.0f);
+		SceneManager.LoadScene(GameController.SCENE_OVER);
 	}
 
 	public void OnEnemyEntrance()
