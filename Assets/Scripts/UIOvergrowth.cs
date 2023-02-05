@@ -14,40 +14,24 @@ public class UIOvergrowth : MonoBehaviour
     public Sprite[] stageSprites;
     private Image _image;
 
-    public int curretStage
-    {
-        get => _currentStage;
-        set
-        {
-            _currentStage = Mathf.Max(0, value);
-            ForceUpdate();
-        }
-    }
-    [SerializeField]
-    public int _currentStage = 0;
+    public int currentStage;
     // Start is called before the first frame update
     void Start()
     {
         _image = GetComponent<Image>();
+        currentStage = 0;
         Assert.IsNotNull(_image);
     }
 
-    void ForceUpdate()
+    // Update is called once per frame
+    void Update()
     {
         if (stageSprites == null)
             return;
         int stagesAvailable = stageSprites.Length;
         if (stagesAvailable > 0)
         {
-            _image.sprite = stageSprites[_currentStage % stagesAvailable];
+            _image.sprite = stageSprites[Mathf.Max(0, currentStage) % stagesAvailable];
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-#if UNITY_EDITOR
-        ForceUpdate();
-#endif
     }
 }

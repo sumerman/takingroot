@@ -5,6 +5,8 @@ using System.IO;
 
 public class GameController : MonoBehaviour
 {
+    public const string SCENE_GAME = "Game";
+
     [SerializeField] public Enemy currentEnemy;
     [SerializeField] public Hand hand;
     [SerializeField] public Deck deck;
@@ -16,17 +18,32 @@ public class GameController : MonoBehaviour
     CharacterTypes characterTypes;
     AvailableCards availableCards;
 
-    // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         LoadResources();
+        NewGame();
+    }
+
+    public void NewGame() 
+    {
         CharacterType characterType = characterTypes.GetCharacterType(1);
         currentEnemy = new Enemy(characterType);
         deck = Deck.GenerateSafeDeck(availableCards, characterType);
         hand = new Hand(deck);
     }
 
-    // Update is called once per frame
+    public void OnGameSceneStart(UIGameSceneController sceneController) 
+    {
+        // TODO
+        sceneController.overgrowth = 3;
+    }
+
+    public void OnEnemyEntrance() 
+    {
+        // TODO
+    }
+
     void Update()
     {
         
