@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
 
     
     CharacterTypes characterTypes;
-    public static AvailableCards availableCards;
     private int round = 1;
 
     public int Round { get => round; set => round = value; }
@@ -32,14 +31,14 @@ public class GameController : MonoBehaviour
     {
         CharacterType characterType = characterTypes.GetCharacterType(round);
         currentEnemy = new Enemy(characterType);
-        deck = Deck.GenerateSafeDeck(GameController.availableCards, characterType);
+        deck = Deck.GenerateSafeDeck(characterType);
         hand = new Hand(deck);
     }
 
     public void OnGameSceneStart(UIGameSceneController sceneController) 
     {
         // TODO
-        sceneController.overgrowth = 3;
+        sceneController.overgrowth = 0;
     }
 
     public void OnEnemyEntrance() 
@@ -55,12 +54,14 @@ public class GameController : MonoBehaviour
     void LoadResources()
     {
         characterTypes = JsonUtility.FromJson<CharacterTypes>(characterTypesJson.text);
-        availableCards = JsonUtility.FromJson<AvailableCards>(cardsJson.text);
+        Deck.availableCards = JsonUtility.FromJson<AvailableCards>(cardsJson.text);
     }
 
-    private void StartNextRound()
+    private void StartNextRound(UIGameSceneController sceneController)
     {
         round++;
+        sceneController.overgrowth = round - 1;
         CharacterType characterType = characterTypes.GetCharacterType(round);
+        deck = Deck.ShuffleNewDeck();
     }
 }
