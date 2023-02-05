@@ -7,6 +7,20 @@ public enum CardType {
     Action = 2
 }
 
+public struct ResolvedCard {
+    Reply reply;
+    List<Card> cards;
+
+    public ResolvedCard(Reply reply, List<Card> cards)
+    {
+        this.reply = reply;
+        this.cards = cards;
+    }
+
+    public Reply Reply { get => reply; }
+    public List<Card> Cards { get => cards; }
+}
+
 [System.Serializable]
 public class AvailableCards
 {
@@ -39,18 +53,26 @@ public class Card
         
     }
 
-    void Play()
+    public ResolvedCard Play()
     {
         Hand hand = controller.hand;
+        hand.WithdrawCard(this);
         if(this.CardType == CardType.Argument)
         {
             Enemy enemy = controller.currentEnemy;
-            enemy.ApplyCard(this);
+            Reply reply = enemy.ApplyCard(this);
+
+            return new ResolvedCard(reply, null);
         }
         else if(this.CardType == CardType.Action)
         {
-            hand.ApplyCard(this);
+            List<Card> cards = hand.ApplyCard(this);
+
+            return new ResolvedCard(null, cards);
         }
-        hand.WithdrawCard(this);
+        else
+        {
+            throw new System.Exception("wrong card type");
+        }
     }
 }

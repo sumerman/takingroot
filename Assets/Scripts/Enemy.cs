@@ -12,7 +12,7 @@ public class Enemy
         this.characterType = characterType;
     }
 
-    public void ApplyCard(Card card)
+    public Reply ApplyCard(Card card)
     {
         if (card.CardType != CardType.Argument)
         {
@@ -24,8 +24,8 @@ public class Enemy
         {
             victories++;
         }
-        // TODO: render `reply.Text` in a dialog box
-        // TODO: conditional logic on `reply.Effect`
+
+        return reply;
     }
 
     public bool Defeated
