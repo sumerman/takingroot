@@ -32,7 +32,7 @@ public class Game_Over_Screen : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Game");
     }
 
 }
