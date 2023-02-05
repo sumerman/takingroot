@@ -23,7 +23,7 @@ public class Card
 {
     public string title;
     public int id;
-    public string spriteId;
+    public string spriteName;
     public CardType CardType { get; }
     public GameController controller;
 

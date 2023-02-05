@@ -778,10 +778,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActionCard
       objectReference: {fileID: 0}
-    - target: {fileID: 7335052565446055102, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
-      propertyPath: _backgroundIdx
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7335052565891810960, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -836,10 +832,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}

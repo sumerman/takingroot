@@ -13,7 +13,7 @@ public class UIDeck : MonoBehaviour
 	private Dictionary<string, Sprite> _cardSprites;
 	private int backgroundIndex = 0;
 
-	void Start()
+	void Awake()
 	{
 		_layoutGroup = GetComponent<LayoutGroup>();
 		Assert.IsNotNull(_layoutGroup);
@@ -25,8 +25,11 @@ public class UIDeck : MonoBehaviour
 		{
 			_cardSprites.Add(cardSprites[i].name.ToLower(), cardSprites[i]);
 		}
-
 		Clear();
+	}
+
+	void Start()
+	{
 	}
 
 	public void Clear()

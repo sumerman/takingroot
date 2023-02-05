@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy
 {
-    CharacterType characterType;
+    public CharacterType characterType;
     int victories = 0;
 
     public Enemy(CharacterType characterType)
