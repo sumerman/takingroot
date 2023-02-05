@@ -1584,6 +1584,7 @@ GameObject:
   - component: {fileID: 1605793231}
   - component: {fileID: 1605793229}
   - component: {fileID: 1605793232}
+  - component: {fileID: 1605793233}
   m_Layer: 5
   m_Name: History
   m_TagString: Untagged
@@ -1607,11 +1608,11 @@ RectTransform:
   m_Father: {fileID: 874047013}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 157.16365, y: 126.6254}
-  m_SizeDelta: {x: -1323.1428, y: -558.2794}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -146, y: 556}
+  m_SizeDelta: {x: 596.8572, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1605793229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,8 +1629,8 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 20
-    m_Bottom: 10000
-  m_ChildAlignment: 0
+    m_Bottom: 10
+  m_ChildAlignment: 6
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -1659,3 +1660,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBubblePrefab: {fileID: 8307144807539079545, guid: 51e2f71e0de1165458f5bbda3c8d3f29, type: 3}
+--- !u!114 &1605793233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605793227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2

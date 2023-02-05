@@ -69,7 +69,12 @@ public class GameController : MonoBehaviour
 
     public void PlayCard(Card c) {
         Debug.Log("PlayCard!");
-        c.Play(hand, currentEnemy);
+        _currentSceneController.dialog.AddPhrase(Speaker.Character, c.title);
+        ResolvedCard res = c.Play(hand, currentEnemy);
+        if (res.Reply != null) {
+			// _currentSceneController.hand.AddCard(c.spriteName, c.title, () => this.gameObject.SendMessage("PlayCard", c));
+            _currentSceneController.dialog.AddPhrase(Speaker.Enemy, res.Reply.text);
+        }
     }
 
 	public void OnEnemyEntrance()
