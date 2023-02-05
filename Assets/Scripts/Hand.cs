@@ -61,6 +61,10 @@ public class Hand
         }
     }
 
+    public bool IsEmpty() {
+        return cards.Count == 0;
+    }
+
     Card AddCardById(int id)
     {
         Card card = Deck.availableCards.GetCard(id);

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class UIGameStart : MonoBehaviour
 {
 	public Button uiStart;
-	public GameController gameController;
 	void Start()
 	{
 		if (uiStart)
@@ -15,9 +14,12 @@ public class UIGameStart : MonoBehaviour
 
 	void OnStartClick()
 	{
-        if (gameController) {
-            gameController.NewGame();
-        }
+        
+		GameController gameController = FindObjectOfType<GameController>();
+		if (gameController)
+		{
+			gameController.NewGame();
+		}
 	}
 
 	void Update()
