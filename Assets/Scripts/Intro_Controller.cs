@@ -24,7 +24,7 @@ public class Intro_Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Control)
+        if (!Input.GetKeyDown(KeyCode.Escape) && Input.anyKey && Control)
         {
             Control = false;
             MyAnim.Play("Text Fade In", 0, 0);
