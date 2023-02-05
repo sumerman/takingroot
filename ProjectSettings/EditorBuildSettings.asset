@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro Cutscene.unity
+    guid: caab9b8eeff764235aced5eb8ae56318
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: fc63a7891c0dd47bdb687dcbfa133462
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Intro Cutscene.unity
-    guid: caab9b8eeff764235aced5eb8ae56318
+    path: Assets/Scenes/Game Over.unity
+    guid: a91aaacdfea2249f485d1a98f600f2a6
   m_configObjects: {}
