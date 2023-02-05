@@ -260,6 +260,9 @@ MonoBehaviour:
   onAnimationFinish:
     m_PersistentCalls:
       m_Calls: []
+  onAnimationLeaveFinish:
+    m_PersistentCalls:
+      m_Calls: []
   avatarImage: {fileID: 1480659950}
   _currentAvatar: Alpha and Omega
 --- !u!95 &86773928
@@ -294,6 +297,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -362,9 +366,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.000035256147
     width: 1
-    height: 1
+    height: 0.9999295
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -400,6 +404,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981631c2587a37049b711c14614440cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetWidth: 1920
+  targetHeight: 1080
+  type: 0
 --- !u!1 &527365119
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.5158691, y: 3.1246338}
+  m_AnchoredPosition: {x: -1.5158081, y: 3.1246338}
   m_SizeDelta: {x: -344.9502, y: -118.87018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527365121
@@ -1492,7 +1511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 54.17993, y: 28.57965}
+  m_AnchoredPosition: {x: 54.17993, y: 28.57959}
   m_SizeDelta: {x: -1375.2, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1563944524
