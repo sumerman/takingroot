@@ -252,7 +252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99da2873f2f8c488296b155468aeac6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarSprites: []
+  avatarSprites:
+  - {fileID: 21300000, guid: 8882e0e3e4aac4979a10e46f3fdb79d8, type: 3}
+  - {fileID: 21300000, guid: 48e43516063f74769beba9af0a4665e3, type: 3}
+  - {fileID: 21300000, guid: 9917e8d1d9ecc4dce9aaf3aa00634d61, type: 3}
+  - {fileID: 21300000, guid: 963fe9858053c492384f17af41961bb3, type: 3}
   onAnimationFinish:
     m_PersistentCalls:
       m_Calls:
