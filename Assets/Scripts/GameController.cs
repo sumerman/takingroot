@@ -62,5 +62,6 @@ public class GameController : MonoBehaviour
         round++;
         sceneController.overgrowth = round - 1;
         CharacterType characterType = characterTypes.GetCharacterType(round);
+        deck = Deck.ShuffleNewDeck();
     }
 }
