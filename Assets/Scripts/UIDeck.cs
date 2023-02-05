@@ -53,7 +53,11 @@ public class UIDeck : MonoBehaviour
 			{
 				uiCard.cardSprite = _cardSprites[spriteName];
 				uiCard.backgroundIndex = backgroundIndex;
-                uiCard.onClick.AddListener(action);
+				uiCard.onClick.AddListener(() =>
+				{
+					Destroy(newCard);
+					action();
+				});
 				backgroundIndex++;
 			}
 		}

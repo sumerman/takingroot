@@ -8,6 +8,7 @@ public class UIDialogHistory : MonoBehaviour
 {
     private LayoutGroup _layoutGroup;
     public GameObject dialogBubblePrefab;
+
     void Awake()
     {
         _layoutGroup = GetComponent<LayoutGroup>();
