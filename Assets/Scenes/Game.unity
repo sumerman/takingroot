@@ -778,10 +778,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActionCard
       objectReference: {fileID: 0}
-    - target: {fileID: 7335052565446055102, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
-      propertyPath: _backgroundIdx
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7335052565891810960, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -836,10 +832,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
@@ -1241,7 +1233,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1077053845}
   - component: {fileID: 1077053844}
-  - component: {fileID: 1077053846}
   m_Layer: 0
   m_Name: GameSceneController
   m_TagString: Untagged
@@ -1282,20 +1273,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1077053846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077053843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 420a38b151f71440784e940cb7d4fd3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterTypesJson: {fileID: 4900000, guid: dde70db861e7447ee8ea5f9d2db562c5, type: 3}
-  cardsJson: {fileID: 4900000, guid: f00a66656a95caf42888db5ff72b82ec, type: 3}
 --- !u!224 &1081306605 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8307144807539079544, guid: 51e2f71e0de1165458f5bbda3c8d3f29, type: 3}

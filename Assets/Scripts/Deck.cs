@@ -66,9 +66,10 @@ public class Deck
         }
         for (int cardId = 1; cardId <= maxArgumentCardId; cardId++)
         {
-            if (!victoryCardsIds.Contains(cardId))
+            Card c = availableCards.GetCard(cardId);
+            if (!safeDeck.Contains(c))
             {
-                safeDeck.Add(availableCards.GetCard(cardId));
+                safeDeck.Add(c);
             }
         }
         DeckRandomizer.Shuffle(safeDeck, safeCardsNumber, safeDeck.Count);

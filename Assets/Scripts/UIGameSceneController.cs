@@ -15,15 +15,20 @@ public class UIGameSceneController : MonoBehaviour
   
     private GameController _gc;
 
-	void Start()
-	{
+    void Awake() {
 		Assert.IsNotNull(enemy);
 		enemy.onAnimationFinish.AddListener(OnEnemyEntrance);
+    }
+	void Start()
+	{
 		GameController _gc = FindObjectOfType<GameController>();
-		if (_gc)
-		{
-            _gc.OnGameSceneStart(this);
-		}
+		if (_gc == null)
+        {
+            GameObject gcObj = new GameObject("TestGameController", typeof(GameController));
+            _gc = gcObj.GetComponent<GameController>();
+            _gc.NewGame();
+        }
+        _gc.OnGameSceneStart(this);
 	}
 
 	void OnEnemyEntrance()
