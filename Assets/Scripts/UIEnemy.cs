@@ -56,7 +56,7 @@ public class UIEnemy : MonoBehaviour
 
     public void MakeLeave() {
         Animator anim = GetComponent<Animator>();
-        anim.Play("Leave", 0, 0.8f);
+        anim.Play("Leave", -1, 0.0f);
     }
 
     // Update is called once per frame
