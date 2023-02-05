@@ -10,15 +10,18 @@ public enum CardType {
 public struct ResolvedCard {
     Reply reply;
     List<Card> cards;
+    bool defeated;
 
-    public ResolvedCard(Reply reply, List<Card> cards)
+    public ResolvedCard(Reply reply, List<Card> cards, bool defeated)
     {
         this.reply = reply;
         this.cards = cards;
+        this.defeated = defeated;
     }
 
     public Reply Reply { get => reply; }
     public List<Card> Cards { get => cards; }
+    public bool Defeated { get => defeated; }
 }
 
 [System.Serializable]
@@ -47,13 +50,13 @@ public class Card
         {
             Reply reply = enemy.ApplyCard(this);
 
-            return new ResolvedCard(reply, null);
+            return new ResolvedCard(reply, null, enemy.Defeated);
         }
         else if(this.cardType == CardType.Action)
         {
             List<Card> cards = hand.ApplyCard(this);
 
-            return new ResolvedCard(null, cards);
+            return new ResolvedCard(null, cards, false);
         }
         else
         {
