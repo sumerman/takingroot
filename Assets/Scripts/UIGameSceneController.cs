@@ -13,29 +13,29 @@ public class UIGameSceneController : MonoBehaviour
 
 	public int overgrowth;
   
-    private GameController _gc;
-
     void Awake() {
 		Assert.IsNotNull(enemy);
 		enemy.onAnimationFinish.AddListener(OnEnemyEntrance);
     }
 	void Start()
 	{
-		GameController _gc = FindObjectOfType<GameController>();
-		if (_gc == null)
+		GameController gc = FindObjectOfType<GameController>();
+		if (gc == null)
         {
             GameObject gcObj = new GameObject("TestGameController", typeof(GameController));
-            _gc = gcObj.GetComponent<GameController>();
-            _gc.NewGame();
+            gc = gcObj.GetComponent<GameController>();
+            gc.NewGame();
         }
-        _gc.OnGameSceneStart(this);
+        gc.OnGameSceneStart(this);
 	}
 
 	void OnEnemyEntrance()
 	{
-		if (_gc)
+        Debug.Log("Enemy Entrance.");
+		GameController gc = FindObjectOfType<GameController>();
+		if (gc)
 		{
-            _gc.OnEnemyEntrance();
+            gc.OnEnemyEntrance();
 		}
 	}
 

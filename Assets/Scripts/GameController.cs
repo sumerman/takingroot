@@ -64,11 +64,13 @@ public class GameController : MonoBehaviour
 			Assert.IsNotNull(c); // due to the loop condition
 			_currentSceneController.hand.AddCard(c.spriteName, c.title);
 		}
+        _currentSceneController.dialog.Clear();
 	}
 
 	public void OnEnemyEntrance()
 	{
-		// TODO
+        Debug.Log("Enemy Entrance callback;");
+        _currentSceneController.dialog.AddPhrase(Speaker.Enemy, currentEnemy.characterType.intro);
 	}
 
 	void Update()
