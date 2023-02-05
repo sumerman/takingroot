@@ -10,22 +10,22 @@ public enum CardType {
 [System.Serializable]
 public class AvailableCards
 {
-    List<Card> cards;
+    public List<Card> cards;
 
     public Card GetCard(int cardId)
     {
-        return cards.Find(r => r.Id == cardId);
+        return cards.Find((r) => r.id == cardId);
     }
 }
 
 [System.Serializable]
 public class Card
 {
-    [SerializeField] string title;
-    [SerializeField] public int Id { get; }
-    [SerializeField] string spriteId;
-    [SerializeField] public CardType CardType { get; }
-    [SerializeField] GameController controller;
+    public string title;
+    public int id;
+    public string spriteId;
+    public CardType CardType { get; }
+    public GameController controller;
 
     // Start is called before the first frame update
     void Start()

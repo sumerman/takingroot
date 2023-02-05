@@ -11,7 +11,7 @@ public enum ActionCards
 
 public class Hand
 {
-    List<Card> cards;
+    List<Card> cards = new List<Card>();
     Deck deck;
 
     public Hand(Deck deck)
@@ -25,7 +25,7 @@ public class Hand
 
     public void ApplyCard(Card card)
     {
-        switch((ActionCards) card.Id)
+        switch((ActionCards) card.id)
         {
             case ActionCards.Rootstagram:
                 DrawNewCard();

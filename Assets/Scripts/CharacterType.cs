@@ -10,7 +10,7 @@ public class CharacterTypes
 
     public CharacterType GetCharacterType(int typeId)
     {
-        return items.Find(i => i.id == typeId);
+        return items.Find((i) => i.id == typeId);
     }
 }
 

@@ -19,7 +19,7 @@ public class Enemy
             throw new System.Exception("Card type isn't an Argument");
         }
         
-        Reply reply = characterType.ReplyToCard(card.Id);
+        Reply reply = characterType.ReplyToCard(card.id);
         if (reply.effect == Effect.Positive)
         {
             victories++;
