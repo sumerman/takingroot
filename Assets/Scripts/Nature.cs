@@ -23,6 +23,12 @@ public class Nature
     public int id;
     public List<Reply> replies;
 
+    public List<int> VictoryCardIds()
+    {
+        List<Reply> victoryReplies = replies.FindAll(r => r.effect == Effect.Positive);
+        return victoryReplies.ConvertAll<int>(reply => reply.cardId);
+    }
+
     public Reply GetReply(int cardId)
     {
         return replies.Find(r => r.cardId == cardId);

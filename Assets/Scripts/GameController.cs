@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour
     void Start()
     {
         LoadResources();
+        CharacterType characterType = characterTypes.GetCharacterType(1);
+        currentEnemy = new Enemy(characterType);
+        deck = Deck.GenerateSafeDeck(availableCards, characterType);
     }
 
     // Update is called once per frame

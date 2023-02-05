@@ -7,6 +7,11 @@ using UnityEngine;
 public class CharacterTypes
 {
     public List<CharacterType> items;
+
+    public CharacterType GetCharacterType(int typeId)
+    {
+        return items.Find(i => i.id == typeId);
+    }
 }
 
 [System.Serializable]
@@ -25,7 +30,7 @@ public class CharacterType
         get {
             if (selectedNature == null)
             {
-                selectedNature = natures[Random.Range(0, natures.Count)];
+                selectedNature = natures[Random.Range(0, natures.Count - 1)];
             }
             return selectedNature;
         }
