@@ -93,6 +93,37 @@ public class Deck
         return new Deck(Deck.currentDeck);
     }
 
+    public static List<Card> ShowExtraCards(int number = 2)
+    {
+        extraCards.Shuffle();
+        return extraCards.GetRange(0, number);
+    }
+
+    public static Card MoveToDeck(Card card)
+    {
+        if (extraCards.Remove(card))
+        {
+            currentDeck.Add(card);
+            return card;
+        }
+        else
+        {
+            throw new System.Exception("Card is not in the list of extraCards");
+        }
+    }
+
+    public static Card DeleteFromDeck(Card card)
+    {
+        if (currentDeck.Remove(card))
+        {
+            return card;
+        }
+        else
+        {
+            throw new System.Exception("Card is not in the list of currentDeck");
+        }
+    }
+
     public int Size
     {
         get { return cards.Count; }
