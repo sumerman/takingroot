@@ -87,20 +87,4 @@ public class Deck
     {
         return cards.Dequeue();
     }
-
-
-    private Queue<Card> ShuffleDeck(List<Card> cards)
-    {
-        int n = cards.Count;
-        while (n > 1)
-        {
-            n--;
-            int k = Random.Range(0, n);
-            Card value = cards[k];
-            cards[k] = cards[n];
-            cards[n] = value;
-        }
-
-        return new Queue<Card>(cards);
-    }
 }
