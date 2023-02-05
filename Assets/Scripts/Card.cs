@@ -41,18 +41,6 @@ public class Card
     public CardType CardType { get; }
     public GameController controller;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public ResolvedCard Play()
     {
         Hand hand = controller.hand;
