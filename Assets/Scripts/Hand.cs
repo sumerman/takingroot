@@ -17,10 +17,6 @@ public class Hand
     public Hand(Deck deck)
     {
         this.deck = deck;
-        for (int i = 0; i < Deck.defaultHandSize; i++)
-        {
-            DrawNewCard();
-        }
     }
 
     public List<Card> ApplyCard(Card card)
