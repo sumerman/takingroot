@@ -8,7 +8,7 @@ public class UIDialogHistory : MonoBehaviour
 {
     private LayoutGroup _layoutGroup;
     public GameObject dialogBubblePrefab;
-    void Start()
+    void Awake()
     {
         _layoutGroup = GetComponent<LayoutGroup>();
         Assert.IsNotNull(_layoutGroup); 

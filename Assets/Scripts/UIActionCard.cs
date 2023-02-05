@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -31,6 +32,8 @@ public class UIActionCard : MonoBehaviour
 	[SerializeField]
 	private Sprite _cardSprite;
 
+    public UnityEvent onClick;
+
 	public int backgroundIndex
 	{
 		get => _backgroundIdx;
@@ -40,18 +43,26 @@ public class UIActionCard : MonoBehaviour
 	private int _backgroundIdx;
 	private Image _backgroundImage;
 	private TextMeshProUGUI _textComponent;
+    private Button _button;
 
 	void Awake()
 	{
 		ForceUpdate();
+        _button.onClick.AddListener(OnClick);
 	}
+
+    public void OnClick() {
+        onClick.Invoke();
+    }
 
 	public void ForceUpdate()
 	{
 		_textComponent = GetComponentInChildren<TextMeshProUGUI>();
 		_backgroundImage = GetComponentInChildren<Image>();
+		_button = GetComponent<Button>();
 		Assert.IsNotNull(_textComponent);
 		Assert.IsNotNull(_backgroundImage);
+		Assert.IsNotNull(_button);
 		_textComponent.text = _text;
 		_textComponent.ForceMeshUpdate(true, true);
 		cardImage.sprite = _cardSprite;
@@ -60,6 +71,7 @@ public class UIActionCard : MonoBehaviour
 		{
 			_backgroundImage.sprite = backgroundSprites[Mathf.Max(0, _backgroundIdx) % backgroundSprites.Length];
 		}
+
 	}
 
 	void Update()

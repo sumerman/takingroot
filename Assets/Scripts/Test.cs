@@ -36,6 +36,6 @@ public class Test : MonoBehaviour
         _speakerIdx += 1;
 
         UIDeck deck = GameObject.FindObjectOfType<UIDeck>();
-        deck.AddCard("mental_breakdown", "Can't a guy have a mental breakdown in private?");
+        // deck.AddCard("mental_breakdown", "Can't a guy have a mental breakdown in private?");
     }
 }

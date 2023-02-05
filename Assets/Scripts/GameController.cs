@@ -62,13 +62,19 @@ public class GameController : MonoBehaviour
 		{
 			Card c = hand.DrawNewCard();
 			Assert.IsNotNull(c); // due to the loop condition
-			_currentSceneController.hand.AddCard(c.spriteName, c.title);
+			_currentSceneController.hand.AddCard(c.spriteName, c.title, () => this.gameObject.SendMessage("PlayCard", c));
 		}
+        _currentSceneController.dialog.Clear();
 	}
+
+    public void PlayCard(Card c) {
+        Debug.Log("PlayCard!");
+        c.Play(hand, currentEnemy);
+    }
 
 	public void OnEnemyEntrance()
 	{
-		// TODO
+        _currentSceneController.dialog.AddPhrase(Speaker.Enemy, currentEnemy.characterType.intro);
 	}
 
 	void Update()

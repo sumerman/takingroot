@@ -10,7 +10,7 @@ public enum Effect
 }
 
 [System.Serializable]
-public struct Reply
+public class Reply
 {
     public Effect effect;
     public string text;
