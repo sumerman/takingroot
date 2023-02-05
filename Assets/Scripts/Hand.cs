@@ -12,7 +12,16 @@ public enum ActionCards
 public class Hand
 {
     List<Card> cards;
-    GameController controller;
+    Deck deck;
+
+    public Hand(Deck deck)
+    {
+        this.deck = deck;
+        for (int i = 0; i < Deck.defaultHandSize; i++)
+        {
+            DrawNewCard();
+        }
+    }
 
     public void ApplyCard(Card card)
     {
@@ -38,7 +47,6 @@ public class Hand
 
     public void DrawNewCard()
     {
-        Deck deck = controller.deck;
         if (deck.CanDrawCard())
         {
             cards.Add(deck.DrawNewCard());

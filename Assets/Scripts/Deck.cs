@@ -34,7 +34,7 @@ static class DeckRandomizer
 public class Deck
 {
     const int maxArgumentCardId = 12;
-    const int defaultHandSize = 3;
+    public const int defaultHandSize = 3;
     Queue<Card> cards;
 
     public Deck(List<Card> cards)
