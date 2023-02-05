@@ -91,7 +91,8 @@ public class Deck
     public static Deck ShuffleNewDeck()
     {
         DeckRandomizer.Shuffle(Deck.currentDeck);
-        return new Deck(Deck.currentDeck);
+
+        return new Deck(new Queue<Card> (Deck.currentDeck));
     }
 
     public static List<Card> ShowExtraCards(int number = 2)
@@ -123,6 +124,13 @@ public class Deck
         {
             throw new System.Exception("Card is not in the list of currentDeck");
         }
+    }
+
+    public static void SimulateDeckBuilding()
+    {
+        Card newCard = ShowExtraCards(1)[0];
+        DeleteFromDeck(currentDeck[0]);
+        MoveToDeck(newCard);
     }
 
     public int Size

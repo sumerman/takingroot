@@ -118,7 +118,15 @@ public class GameController : MonoBehaviour
 		CharacterType characterType = characterTypes.GetCharacterType(round);
 		Assert.IsNotNull(characterType);
 		currentEnemy = new Enemy(characterType);
-		deck = Deck.GenerateSafeDeck(characterType);
+		if (round == 1)
+		{
+            deck = Deck.GenerateSafeDeck(characterType);
+		}
+		else
+		{
+			Deck.SimulateDeckBuilding();
+			deck = Deck.ShuffleNewDeck();
+		}
 		hand = new Hand(deck);
 	}
 
