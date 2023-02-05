@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour
 		}
 		else if (hand.IsEmpty())
 		{
-			SceneManager.LoadScene(GameController.SCENE_MAIN);
+			SceneManager.LoadScene(GameController.SCENE_OVER);
 		}
 	}
 
