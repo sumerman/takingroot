@@ -67,7 +67,7 @@ public class Hand
 
     Card AddCardById(int id)
     {
-        Card card = GameController.availableCards.GetCard(id);
+        Card card = Deck.availableCards.GetCard(id);
         cards.Add(card);
 
         return card;

@@ -39,6 +39,7 @@ public class Deck
     Queue<Card> cards;
     public static List<Card> extraCards;
     public static List<Card> currentDeck;
+    public static AvailableCards availableCards;
 
     public Deck(List<Card> cards)
     {
@@ -51,7 +52,7 @@ public class Deck
         this.cards = cards;
     }
 
-    public static Deck GenerateSafeDeck(AvailableCards availableCards, CharacterType characterType)
+    public static Deck GenerateSafeDeck(CharacterType characterType)
     {
         int safeCardsNumber = characterType.victoriesRequired;
         Nature nature = characterType.SelectedNature;
@@ -84,6 +85,12 @@ public class Deck
         Deck.currentDeck = safeDeck.GetRange(0, deckSize);
 
         return new Deck(new Queue<Card> (Deck.currentDeck));
+    }
+
+    public static Deck ShuffleNewDeck()
+    {
+        DeckRandomizer.Shuffle(Deck.currentDeck);
+        return new Deck(Deck.currentDeck);
     }
 
     public int Size
