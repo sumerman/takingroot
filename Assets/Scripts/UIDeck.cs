@@ -11,6 +11,8 @@ public class UIDeck : MonoBehaviour
 	public Sprite[] cardSprites;
 
 	private Dictionary<string, Sprite> _cardSprites;
+	private int backgroundIndex = 0;
+
 	void Start()
 	{
 		_layoutGroup = GetComponent<LayoutGroup>();
@@ -37,7 +39,7 @@ public class UIDeck : MonoBehaviour
 
 	public void AddCard(string spriteName, string text)
 	{
-		GameObject newCard = Instantiate(actionCardPrefab, transform.position, Quaternion.identity);
+		GameObject newCard = Instantiate(actionCardPrefab, Vector3.one, Quaternion.identity);
 		newCard.transform.SetParent(transform, false);
 		UIActionCard uiCard = newCard.GetComponent<UIActionCard>();
 		if (uiCard)
@@ -46,6 +48,8 @@ public class UIDeck : MonoBehaviour
 			if (_cardSprites.ContainsKey(spriteName))
 			{
 				uiCard.cardSprite = _cardSprites[spriteName];
+				uiCard.backgroundIndex = backgroundIndex;
+				backgroundIndex++;
 			}
 		}
 	}

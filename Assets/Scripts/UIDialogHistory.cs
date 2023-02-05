@@ -22,13 +22,14 @@ public class UIDialogHistory : MonoBehaviour
         }
     }
 
-    public void AddPhrase(string text)
+    public void AddPhrase(Speaker speaker, string text)
     {
         GameObject newPhrase = Instantiate(dialogBubblePrefab, transform.position, Quaternion.identity);
         newPhrase.transform.SetParent(transform, false);
         UIDialogBubble dialogBubble = newPhrase.GetComponent<UIDialogBubble>();
         if (dialogBubble) {
             dialogBubble.text = text;
+            dialogBubble.speaker = speaker;
         }
     }
 
