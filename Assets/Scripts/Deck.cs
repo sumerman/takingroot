@@ -35,7 +35,10 @@ public class Deck
 {
     const int maxArgumentCardId = 12;
     public const int defaultHandSize = 3;
+    public const int deckSize = 8;
     Queue<Card> cards;
+    public static List<Card> extraCards;
+    public static List<Card> currentDeck;
 
     public Deck(List<Card> cards)
     {
@@ -70,7 +73,17 @@ public class Deck
         DeckRandomizer.Shuffle(safeDeck, safeCardsNumber, safeDeck.Count);
         DeckRandomizer.Shuffle(safeDeck, 0, defaultHandSize);
 
-        return new Deck(new Queue<Card> (safeDeck));
+        Deck.extraCards = safeDeck.GetRange(deckSize, safeDeck.Count - deckSize);
+        for (int cardId = maxArgumentCardId + 1; cardId < availableCards.cards.Count; cardId++)
+        {
+            if ((ActionCards) cardId != ActionCards.Meme)
+            {
+                Deck.extraCards.Add(availableCards.GetCard(cardId));
+            }
+        }
+        Deck.currentDeck = safeDeck.GetRange(0, deckSize);
+
+        return new Deck(new Queue<Card> (Deck.currentDeck));
     }
 
     public int Size

@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour
     
     CharacterTypes characterTypes;
     AvailableCards availableCards;
+    private int round = 1;
+
+    public int Round { get => round; set => round = value; }
 
     void Start()
     {
@@ -27,7 +30,7 @@ public class GameController : MonoBehaviour
 
     public void NewGame() 
     {
-        CharacterType characterType = characterTypes.GetCharacterType(1);
+        CharacterType characterType = characterTypes.GetCharacterType(round);
         currentEnemy = new Enemy(characterType);
         deck = Deck.GenerateSafeDeck(availableCards, characterType);
         hand = new Hand(deck);
@@ -55,4 +58,9 @@ public class GameController : MonoBehaviour
         availableCards = JsonUtility.FromJson<AvailableCards>(cardsJson.text);
     }
 
+    private void StartNextRound()
+    {
+        round++;
+        CharacterType characterType = characterTypes.GetCharacterType(round);
+    }
 }
