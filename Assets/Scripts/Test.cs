@@ -24,7 +24,7 @@ public class Test : MonoBehaviour
     {
     }
 
-    void OnClick() 
+    public void OnClick() 
     {
         Debug.Log("Click");
 

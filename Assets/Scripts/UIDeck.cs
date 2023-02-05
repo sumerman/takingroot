@@ -28,8 +28,8 @@ public class UIDeck : MonoBehaviour
         newCard.transform.SetParent(transform, false);
         UIActionCard uiCard = newCard.GetComponent<UIActionCard>();
         if (uiCard) {
-            uiCard.Text = text;
-            uiCard.CardSprite = sprite;
+            uiCard.text = text;
+            uiCard.cardSprite = sprite;
         }
     }
 

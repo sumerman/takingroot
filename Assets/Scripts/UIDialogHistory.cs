@@ -28,7 +28,7 @@ public class UIDialogHistory : MonoBehaviour
         newPhrase.transform.SetParent(transform, false);
         UIDialogBubble dialogBubble = newPhrase.GetComponent<UIDialogBubble>();
         if (dialogBubble) {
-            dialogBubble.Text = text;
+            dialogBubble.text = text;
         }
     }
 

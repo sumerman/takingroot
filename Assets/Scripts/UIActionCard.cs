@@ -13,7 +13,7 @@ using UnityEditor;
 public class UIActionCard : MonoBehaviour
 {
     public Image cardImage;
-    public string Text
+    public string text
     {
         get => _text;
         set { _text = value; ForceUpdate(); }
@@ -21,7 +21,7 @@ public class UIActionCard : MonoBehaviour
     [SerializeField]
     private string _text;
 
-    public Sprite CardSprite
+    public Sprite cardSprite
     {
         get => _cardSprite;
         set { _cardSprite = value; ForceUpdate(); }

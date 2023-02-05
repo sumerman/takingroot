@@ -10,7 +10,7 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class UIDialogBubble : MonoBehaviour
 {
-    public string Text
+    public string text
     {
         get => _text;
         set { _text = value; ForceUpdate(); }

@@ -14,7 +14,7 @@ public class UIOvergrowth : MonoBehaviour
     public Sprite[] stageSprites;
     private Image _image;
 
-    public int CurretStage
+    public int curretStage
     {
         get => _currentStage;
         set
