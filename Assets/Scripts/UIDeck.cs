@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIDeck : MonoBehaviour
@@ -40,7 +41,7 @@ public class UIDeck : MonoBehaviour
 		}
 	}
 
-	public void AddCard(string spriteName, string text)
+	public void AddCard(string spriteName, string text, UnityAction action)
 	{
 		GameObject newCard = Instantiate(actionCardPrefab, Vector3.one, Quaternion.identity);
 		newCard.transform.SetParent(transform, false);
@@ -52,6 +53,7 @@ public class UIDeck : MonoBehaviour
 			{
 				uiCard.cardSprite = _cardSprites[spriteName];
 				uiCard.backgroundIndex = backgroundIndex;
+                uiCard.onClick.AddListener(action);
 				backgroundIndex++;
 			}
 		}

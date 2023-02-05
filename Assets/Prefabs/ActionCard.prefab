@@ -72,7 +72,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc04a29ba2f8c49b091424981bfef757, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffde6b037eeee4fe08694e239f76f4c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -187,7 +187,6 @@ MonoBehaviour:
   cardImage: {fileID: 7335052567056996390}
   _text: Play Me
   backgroundSprites:
-  - {fileID: 21300000, guid: cc04a29ba2f8c49b091424981bfef757, type: 3}
   - {fileID: 21300000, guid: ffde6b037eeee4fe08694e239f76f4c3, type: 3}
   - {fileID: 21300000, guid: 76e957b2f4f1c4c1f8b9b2db758334cc, type: 3}
   _cardSprite: {fileID: -1656879473, guid: 9320c9e4257f7214eb6ce049f21ea1d2, type: 3}

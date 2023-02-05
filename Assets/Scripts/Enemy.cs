@@ -14,7 +14,7 @@ public class Enemy
 
     public Reply ApplyCard(Card card)
     {
-        if (card.CardType != CardType.Argument)
+        if (card.cardType != CardType.Argument)
         {
             throw new System.Exception("Card type isn't an Argument");
         }

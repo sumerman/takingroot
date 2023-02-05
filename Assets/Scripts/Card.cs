@@ -38,21 +38,18 @@ public class Card
     public string title;
     public int id;
     public string spriteName;
-    public CardType CardType { get; }
-    public GameController controller;
+    public CardType cardType;
 
-    public ResolvedCard Play()
+    public ResolvedCard Play(Hand hand, Enemy enemy)
     {
-        Hand hand = controller.hand;
         hand.WithdrawCard(this);
-        if(this.CardType == CardType.Argument)
+        if(this.cardType == CardType.Argument)
         {
-            Enemy enemy = controller.currentEnemy;
             Reply reply = enemy.ApplyCard(this);
 
             return new ResolvedCard(reply, null);
         }
-        else if(this.CardType == CardType.Action)
+        else if(this.cardType == CardType.Action)
         {
             List<Card> cards = hand.ApplyCard(this);
 
