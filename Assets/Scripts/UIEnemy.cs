@@ -16,6 +16,7 @@ public class UIEnemy : MonoBehaviour
 {
     public Sprite[] avatarSprites;
     public UnityEvent onAnimationFinish;
+    public UnityEvent onAnimationLeaveFinish;
     public Image avatarImage;
 
     public string CurretAvatar
@@ -37,6 +38,9 @@ public class UIEnemy : MonoBehaviour
     void OnAnimationFinish() {
         onAnimationFinish.Invoke();
     }
+    void OnAnimationLeaveFinish() {
+        onAnimationLeaveFinish.Invoke();
+    }
     void ForceUpdate()
     {
         if (avatarImage == null || avatarSprites == null || avatarSprites.Length == 0)
@@ -48,6 +52,11 @@ public class UIEnemy : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void MakeLeave() {
+        Animator anim = GetComponent<Animator>();
+        anim.Play("Leave", 0, 0.8f);
     }
 
     // Update is called once per frame

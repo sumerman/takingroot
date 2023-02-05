@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 	public const string SCENE_GAME = "Game";
 	public const string SCENE_OVER = "Game Over";
 	public const string SCENE_MAIN = "Main";
+	public const int MAX_ROUNDS = 4;
 
 	[SerializeField] public Enemy currentEnemy;
 	[SerializeField] public Hand hand;
@@ -56,14 +57,24 @@ public class GameController : MonoBehaviour
 		_currentSceneController = sceneController;
 		_currentSceneController.overgrowth = round - 1;
 		_currentSceneController.enemy.CurretAvatar = currentEnemy.characterType.title;
-		_currentSceneController.hand.Clear();
-		for (int i = 0; i < Deck.defaultHandSize; i++)
-		{
-			Card c = hand.DrawNewCard();
-			Assert.IsNotNull(c); // due to the loop condition
-			_currentSceneController.hand.AddCard(c.spriteName, c.title, () => this.gameObject.SendMessage("PlayCard", c));
-		}
+
 		_currentSceneController.dialog.Clear();
+		_currentSceneController.hand.Clear();
+
+		if (round > MAX_ROUNDS)
+		{
+			Destroy(_currentSceneController.enemy.gameObject);
+		}
+		else
+		{
+			for (int i = 0; i < Deck.defaultHandSize; i++)
+			{
+				Card c = hand.DrawNewCard();
+				Assert.IsNotNull(c); // due to the loop condition
+				_currentSceneController.hand.AddCard(c.spriteName, c.title, () => this.gameObject.SendMessage("PlayCard", c));
+			}
+		}
+
 	}
 
 	public void PlayCard(Card c)
@@ -87,11 +98,11 @@ public class GameController : MonoBehaviour
 		}
 		if (res.Defeated)
 		{
-			StartNextRound(_currentSceneController);
+            _currentSceneController.enemy.MakeLeave();
 		}
 		else if (hand.IsEmpty())
 		{
-			SceneManager.LoadScene(GameController.SCENE_GAME);
+			SceneManager.LoadScene(GameController.SCENE_MAIN);
 		}
 	}
 
@@ -99,6 +110,10 @@ public class GameController : MonoBehaviour
 	{
 		_currentSceneController.dialog.AddPhrase(Speaker.Enemy, currentEnemy.characterType.intro);
 	}
+	public void OnEnemyLeave() 
+    {
+        StartNextRound(_currentSceneController);
+    }
 
 	void Update()
 	{
@@ -132,7 +147,7 @@ public class GameController : MonoBehaviour
 
 	private void StartNextRound(UIGameSceneController sceneController)
 	{
-		if (round < 4)
+		if (round < MAX_ROUNDS)
 		{
 			round++;
 
@@ -140,11 +155,13 @@ public class GameController : MonoBehaviour
 
 			// TODO
 			SceneManager.LoadScene(GameController.SCENE_GAME);
-		} 
-        else 
-        {
+		}
+		else
+		{
+			round++;
+			SceneManager.LoadScene(GameController.SCENE_GAME);
 			// TODO
-			SceneManager.LoadScene(GameController.SCENE_MAIN);
-        }
+			// SceneManager.LoadScene(GameController.SCENE_MAIN);
+		}
 	}
 }

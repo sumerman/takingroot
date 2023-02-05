@@ -17,6 +17,7 @@ public class UIGameSceneController : MonoBehaviour
 	{
 		Assert.IsNotNull(enemy);
 		enemy.onAnimationFinish.AddListener(OnEnemyEntrance);
+		enemy.onAnimationLeaveFinish.AddListener(OnEnemyLeave);
 	}
 	void Start()
 	{
@@ -37,6 +38,15 @@ public class UIGameSceneController : MonoBehaviour
 		if (gc)
 		{
 			gc.OnEnemyEntrance();
+		}
+	}
+	void OnEnemyLeave()
+	{
+		Debug.Log("Enemy Leave.");
+		GameController gc = FindObjectOfType<GameController>();
+		if (gc)
+		{
+			gc.OnEnemyLeave();
 		}
 	}
 
