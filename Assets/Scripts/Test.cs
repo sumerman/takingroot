@@ -32,6 +32,6 @@ public class Test : MonoBehaviour
         hist.AddPhrase("foooo");
 
         UIDeck deck = GameObject.FindObjectOfType<UIDeck>();
-        deck.AddCard(cardSprite, "Bar!");
+        deck.AddCard("mental_breakdown", "Can't a guy have a mental breakdown in private?");
     }
 }

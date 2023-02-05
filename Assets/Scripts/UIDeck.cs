@@ -6,35 +6,52 @@ using UnityEngine.UI;
 
 public class UIDeck : MonoBehaviour
 {
-    private LayoutGroup _layoutGroup;
-    public GameObject actionCardPrefab;
-    void Start()
-    {
-        _layoutGroup = GetComponent<LayoutGroup>();
-        Assert.IsNotNull(_layoutGroup); 
-        Clear();
-    }
+	private LayoutGroup _layoutGroup;
+	public GameObject actionCardPrefab;
+	public Sprite[] cardSprites;
 
-    public void Clear() 
-    {
-        while(transform.childCount > 0) {
-            DestroyImmediate(transform.GetChild(0).gameObject);
-        }
-    }
+	private Dictionary<string, Sprite> _cardSprites;
+	void Start()
+	{
+		_layoutGroup = GetComponent<LayoutGroup>();
+		Assert.IsNotNull(_layoutGroup);
 
-    public void AddCard(Sprite sprite, string text)
-    {
-        GameObject newCard = Instantiate(actionCardPrefab, transform.position, Quaternion.identity);
-        newCard.transform.SetParent(transform, false);
-        UIActionCard uiCard = newCard.GetComponent<UIActionCard>();
-        if (uiCard) {
-            uiCard.text = text;
-            uiCard.cardSprite = sprite;
-        }
-    }
+		_cardSprites = new Dictionary<string, Sprite>();
+		if (cardSprites == null || cardSprites.Length == 0)
+			return;
+		for (int i = 0; i < cardSprites.Length; i++)
+		{
+			_cardSprites.Add(cardSprites[i].name.ToLower(), cardSprites[i]);
+		}
 
-    void Update()
-    {
-        
-    }
+		Clear();
+	}
+
+	public void Clear()
+	{
+		while (transform.childCount > 0)
+		{
+			DestroyImmediate(transform.GetChild(0).gameObject);
+		}
+	}
+
+	public void AddCard(string spriteName, string text)
+	{
+		GameObject newCard = Instantiate(actionCardPrefab, transform.position, Quaternion.identity);
+		newCard.transform.SetParent(transform, false);
+		UIActionCard uiCard = newCard.GetComponent<UIActionCard>();
+		if (uiCard)
+		{
+			uiCard.text = text;
+			if (_cardSprites.ContainsKey(spriteName))
+			{
+				uiCard.cardSprite = _cardSprites[spriteName];
+			}
+		}
+	}
+
+	void Update()
+	{
+
+	}
 }

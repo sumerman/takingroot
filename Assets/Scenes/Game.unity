@@ -1423,8 +1423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -703.74725, y: 309.22916}
-  m_SizeDelta: {x: -1515.8145, y: 561.299}
+  m_AnchoredPosition: {x: -633.42004, y: 309.22916}
+  m_SizeDelta: {x: -1375.2, y: 561.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563944524
 MonoBehaviour:
@@ -1473,6 +1473,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionCardPrefab: {fileID: 7335052565446055073, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
+  cardSprites:
+  - {fileID: 21300000, guid: 0d4c8134a24384fecb45fe38729be21b, type: 3}
+  - {fileID: 21300000, guid: eb5c936e7cbec46059ea35c3f052b2c5, type: 3}
+  - {fileID: 21300000, guid: 19132a34878164fe8a027c3ac66eb465, type: 3}
+  - {fileID: 21300000, guid: 6442bcc92864d4b92b2332367f63a27c, type: 3}
+  - {fileID: 21300000, guid: dc1160507e0984d4e90dd365927145e2, type: 3}
+  - {fileID: 21300000, guid: 7162af9ff4901426286e0ad1d96a7769, type: 3}
+  - {fileID: 21300000, guid: a1b8e6f4709304fa08ba93f29d0c7d15, type: 3}
+  - {fileID: 21300000, guid: d99899402c41042ca845c5f7e046198a, type: 3}
+  - {fileID: 21300000, guid: 5dfa01a5963ae47e7b87b28e5ff87cb6, type: 3}
+  - {fileID: 21300000, guid: 0bb7d8fe9235e444aa25dc6bc5253608, type: 3}
+  - {fileID: 21300000, guid: 572086b6c4dd1496188feb5c3b3de60f, type: 3}
+  - {fileID: 21300000, guid: 04bd1daaea3f245cba1d502a245f7a45, type: 3}
+  - {fileID: 21300000, guid: cf0a6676f313e4a8fa4644b894b4af0e, type: 3}
+  - {fileID: 21300000, guid: 549f4a537e2094c17a826deb8e292cb3, type: 3}
+  - {fileID: 21300000, guid: 98fb93130483248889e0332ee86c3d36, type: 3}
 --- !u!1 &1605793227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335052565446055072, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7335052565446055072, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1713,6 +1729,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335052567056996388, guid: 260bb4172e4e20b40af0d2dc8eeee991, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
