@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIGameStart : MonoBehaviour
@@ -21,7 +18,6 @@ public class UIGameStart : MonoBehaviour
         if (gameController) {
             gameController.NewGame();
         }
-        SceneManager.LoadScene(GameController.SCENE_GAME);
 	}
 
 	void Update()
