@@ -40,27 +40,33 @@ public class Hand
         }
     }
 
-    public void WithdrawCard(Card card)
+    public Card WithdrawCard(Card card)
     {
         cards.Remove(card);
+
+        return card;
     }
 
-    public void DrawNewCard()
+    public Card DrawNewCard()
     {
         if (deck.CanDrawCard())
         {
-            cards.Add(deck.DrawNewCard());
+            Card newCard = deck.DrawNewCard();
+            cards.Add(newCard);
+
+            return newCard;
         }
         else
         {
-            // TODO render empty hand notification
+            return null;
         }
     }
 
-    void AddCardById(int id)
+    Card AddCardById(int id)
     {
-        // Card card = Card.CreateById(id)
-        Card card = null; // TODO replace
+        Card card = GameController.availableCards.GetCard(id);
         cards.Add(card);
+
+        return card;
     }
 }

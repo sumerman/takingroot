@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
 
     
     CharacterTypes characterTypes;
-    AvailableCards availableCards;
+    public static AvailableCards availableCards;
     private int round = 1;
 
     public int Round { get => round; set => round = value; }
@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
     {
         CharacterType characterType = characterTypes.GetCharacterType(round);
         currentEnemy = new Enemy(characterType);
-        deck = Deck.GenerateSafeDeck(availableCards, characterType);
+        deck = Deck.GenerateSafeDeck(GameController.availableCards, characterType);
         hand = new Hand(deck);
     }
 
