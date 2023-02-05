@@ -23,21 +23,24 @@ public class Hand
         }
     }
 
-    public void ApplyCard(Card card)
+    public List<Card> ApplyCard(Card card)
     {
+        List<Card> newCards = new List<Card>();
         switch((ActionCards) card.id)
         {
             case ActionCards.Rootstagram:
-                DrawNewCard();
-                AddCardById((int) ActionCards.Meme);
+                newCards.Add(DrawNewCard());
+                newCards.Add(AddCardById((int) ActionCards.Meme));
                 break;
             case ActionCards.News:
-                DrawNewCard();
-                DrawNewCard();
+                newCards.Add(DrawNewCard());
+                newCards.Add(DrawNewCard());
                 break;
             case ActionCards.Meme:
                 break;
         }
+
+        return newCards;
     }
 
     public Card WithdrawCard(Card card)
