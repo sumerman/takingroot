@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 1077053845}
   - component: {fileID: 1077053844}
   m_Layer: 0
-  m_Name: GameSceneController
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,15 +983,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077053843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c238dc20351a4eff9f9dd613446635d, type: 3}
+  m_Script: {fileID: 11500000, guid: 420a38b151f71440784e940cb7d4fd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 86773927}
+  uiEnemy: {fileID: 86773927}
   dialog: {fileID: 1605793232}
-  hand: {fileID: 1563944526}
+  uiHand: {fileID: 1563944526}
   background: {fileID: 527365123}
-  character: {fileID: 1445760931}
-  overgrowth: 0
+  characterPortrait: {fileID: 1445760931}
 --- !u!4 &1077053845
 Transform:
   m_ObjectHideFlags: 0

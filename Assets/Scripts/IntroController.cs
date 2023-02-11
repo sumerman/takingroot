@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class Intro_Controller : MonoBehaviour
+public class IntroController : MonoBehaviour
 {
     [SerializeField] private Text IntroText;
     [SerializeField] private string[] Line;
@@ -14,8 +11,8 @@ public class Intro_Controller : MonoBehaviour
     [SerializeField] private GameObject IntroSlide;
     [SerializeField] private GameObject[] FinalSlide;
     [SerializeField] private GameObject SkipText;
-    private bool Control = false;
-    private int CurrentLine = 0;
+    private bool _control = false;
+    private int _currentLine = 0;
 
     private void Start()
     {
@@ -24,17 +21,18 @@ public class Intro_Controller : MonoBehaviour
 
     private void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Escape) && Input.anyKey && Control)
+        if (!Input.GetKeyDown(KeyCode.Escape) && Input.anyKey && _control)
         {
-            Control = false;
+            _control = false;
             MyAnim.Play("Text Fade In", 0, 0);
-            CurrentLine++;
-            if (CurrentLine <= Line.Length - 1)
+            _currentLine++;
+            if (_currentLine <= Line.Length - 1)
             {
                 Invoke("ControlOn", 0.5f);
                 Click.Play();
-                IntroText.text = Line[CurrentLine];
-            } else
+                IntroText.text = Line[_currentLine];
+            }
+            else
             {
                 IntroText.gameObject.SetActive(false);
                 IntroSlide.SetActive(false);
@@ -44,20 +42,20 @@ public class Intro_Controller : MonoBehaviour
                 {
                     FinalSlide[i].SetActive(true);
                 }
-                Invoke("loadscene" ,4.5f);
+                Invoke("StartGame", 2.5f);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && Control)
+        if (Input.GetKeyDown(KeyCode.Escape) && _control)
         {
-            Control = false;
-            loadscene();
+            _control = false;
+            StartGame();
         }
     }
 
-    void loadscene()
+    void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        GameController.NewGame();
     }
 
     void IntroStart()
@@ -71,6 +69,6 @@ public class Intro_Controller : MonoBehaviour
 
     void ControlOn()
     {
-        Control = true;
+        _control = true;
     }
 }

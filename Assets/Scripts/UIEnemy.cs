@@ -28,8 +28,7 @@ public class UIEnemy : MonoBehaviour
             ForceUpdate();
         }
     }
-    [SerializeField]
-    public string _currentAvatar;
+    [SerializeField] private string _currentAvatar;
     // Start is called before the first frame update
     void Start()
     {

@@ -19,8 +19,7 @@ public class UIActionCard : MonoBehaviour
 		get => _text;
 		set { _text = value; ForceUpdate(); }
 	}
-	[SerializeField]
-	private string _text;
+	[SerializeField] private string _text;
 
 	public Sprite[] backgroundSprites;
 
@@ -29,8 +28,7 @@ public class UIActionCard : MonoBehaviour
 		get => _cardSprite;
 		set { _cardSprite = value; ForceUpdate(); }
 	}
-	[SerializeField]
-	private Sprite _cardSprite;
+	[SerializeField] private Sprite _cardSprite;
 
     public UnityEvent onClick;
 
@@ -39,8 +37,7 @@ public class UIActionCard : MonoBehaviour
 		get => _backgroundIdx;
 		set { _backgroundIdx = value; ForceUpdate(); }
 	}
-	[SerializeField]
-	private int _backgroundIdx;
+	[SerializeField] private int _backgroundIdx;
 	private Image _backgroundImage;
 	private TextMeshProUGUI _textComponent;
     private Button _button;

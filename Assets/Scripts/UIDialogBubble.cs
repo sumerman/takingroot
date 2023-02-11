@@ -22,16 +22,14 @@ public class UIDialogBubble : MonoBehaviour
 		get => _text;
 		set { _text = value; ForceUpdate(); }
 	}
-	[SerializeField]
-	private string _text;
+	[SerializeField] private string _text;
 
 	public Speaker speaker
 	{
 		get => _speaker;
 		set { _speaker = value; ForceUpdate(); }
 	}
-	[SerializeField]
-	private Speaker _speaker;
+	[SerializeField] private Speaker _speaker;
 
 	public Sprite charSpeaker;
 	public Sprite enemySpeaker;
